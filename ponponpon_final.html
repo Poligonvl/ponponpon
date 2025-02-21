@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONPONPON ($PONPON) - The Viral J-Pop Memecoin 🚀🎶</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        .contract {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .video-section, .upload-section, .how-to-buy, .motivational {
+            margin: 30px auto;
+            width: 80%;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+        .input-group {
+            margin-top: 15px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ff69b4;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+        .language-selector {
+            margin: 20px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .video-container iframe {
+            width: 30%;
+        }
+        .user-videos iframe {
+            width: 30%;
+            margin-top: 10px;
+        }
+        .motivational p {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>PONPONPON ($PONPON) 🚀🎶</h1>
+    <p class="contract"><strong>Contract Address:</strong> [Agregar dirección aquí]</p>
+
+    <div class="language-selector">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('jp')">日本語</button>
+        <button onclick="changeLanguage('cn')">中文</button>
+        <button onclick="changeLanguage('kr')">한국어</button>
+        <button onclick="changeLanguage('es')">Español</button>
+    </div>
+
+    <div class="video-section">
+        <h2>🎥 <span id="videoTitle">Viral Videos</span> 🎶</h2>
+        <p id="videoDescription">Watch the best PONPONPON dance videos!</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/yzC4hFK5P3g" allowfullscreen></iframe>
+            <iframe src="https://www.tiktok.com/embed/7422420984596057349" allowfullscreen></iframe>
+            <iframe src="https://v.douyin.com/iPvE5oqd/" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="upload-section">
+        <h2>💃 <span id="uploadTitle">Upload Your Dance Video</span></h2>
+        <p id="uploadDescription">Share your moves and get featured on the site!</p>
+        <div class="input-group">
+            <input type="text" id="videoLink" placeholder="Paste YouTube/TikTok/Bilibili/Douyin/Youku link">
+            <button onclick="addVideo()">Submit</button>
+        </div>
+        <div class="user-videos" id="userVideos"></div>
+    </div>
+
+    <div class="how-to-buy">
+        <h2>🚀 <span id="howToBuyTitle">How to Buy $PONPON</span></h2>
+        <p id="howToBuyStep1">Step 1: Connect your wallet (MetaMask, Trust Wallet, etc.)</p>
+        <p id="howToBuyStep2">Step 2: Buy on <a href="https://four.meme" target="_blank">Four.meme</a></p>
+        <p id="howToBuyStep3">Step 3: Trade on <a href="https://pancakeswap.finance" target="_blank">PancakeSwap</a></p>
+        <p id="howToBuyStep4">Step 4: Join the community & spread the PONPONPON energy! 🎶</p>
+    </div>
+
+    <div class="motivational">
+        <p id="motivationalText">Nunca dejes de bailar y ser joven, arriesgate.</p>
+    </div>
+
+    <script>
+        function addVideo() {
+            var videoLink = document.getElementById('videoLink').value;
+            var embedCode = "";
+
+            if (videoLink.includes("youtube.com") || videoLink.includes("youtu.be")) {
+                embedCode = '<iframe src="' + videoLink.replace("watch?v=", "embed/") + '" allowfullscreen></iframe>';
+            } else if (videoLink.includes("tiktok.com")) {
+                embedCode = '<iframe src="' + videoLink + '" allowfullscreen></iframe>';
+            } else if (videoLink.includes("douyin.com")) {
+                embedCode = '<iframe src="' + videoLink + '" allowfullscreen></iframe>';
+            } else {
+                alert("Please enter a valid YouTube, TikTok, Douyin link.");
+                return;
+            }
+
+            document.getElementById('userVideos').innerHTML += embedCode;
+            document.getElementById('videoLink').value = "";
+        }
+
+        function changeLanguage(lang) {
+            var translations = {
+                en: { videoTitle: "Viral Videos", uploadTitle: "Upload Your Dance Video", howToBuyTitle: "How to Buy $PONPON", motivationalText: "Never stop dancing and being young, take the risk." },
+                jp: { videoTitle: "バイラル動画", uploadTitle: "あなたのダンスビデオをアップロード", howToBuyTitle: "$PONPONの購入方法", motivationalText: "踊ることをやめず、若さを楽しみましょう。リスクを取る勇気を。" },
+                cn: { videoTitle: "病毒视频", uploadTitle: "上传你的舞蹈视频", howToBuyTitle: "如何购买$PONPON", motivationalText: "永远不要停止跳舞和年轻，勇敢去冒险。" },
+                kr: { videoTitle: "바이럴 동영상", uploadTitle: "댄스 비디오 업로드", howToBuyTitle: "$PONPON 구매 방법", motivationalText: "춤을 멈추지 말고 젊음을 즐기세요. 용기를 내세요." },
+                es: { videoTitle: "Videos Virales", uploadTitle: "Sube tu Video de Baile", howToBuyTitle: "Cómo Comprar $PONPON", motivationalText: "Nunca dejes de bailar y ser joven, arriesgate." }
+            };
+
+            document.getElementById("videoTitle").innerText = translations[lang].videoTitle;
+            document.getElementById("uploadTitle").innerText = translations[lang].uploadTitle;
+            document.getElementById("howToBuyTitle").innerText = translations[lang].howToBuyTitle;
+            document.getElementById("motivationalText").innerText = translations[lang].motivationalText;
+        }
+    </script>
+</body>
+</html>
