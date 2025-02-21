@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONPONPON ($PONPON) - The Viral J-Pop Memecoin 🚀🎶</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        .contract {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .video-section, .upload-section, .how-to-buy, .socials {
+            margin: 30px auto;
+            width: 80%;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+        .input-group {
+            margin-top: 15px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ff69b4;
+            border: none;
+            cursor: pointer;
+        }
+        .social-links a {
+            display: block;
+            margin: 10px;
+            color: #ff69b4;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .language-selector {
+            margin: 20px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .video-container iframe {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>PONPONPON ($PONPON) 🚀🎶</h1>
+    <p class="contract"><strong>Contract Address:</strong> [Agregar dirección aquí]</p>
+
+    <div class="language-selector">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('jp')">日本語</button>
+        <button onclick="changeLanguage('cn')">中文</button>
+        <button onclick="changeLanguage('kr')">한국어</button>
+        <button onclick="changeLanguage('es')">Español</button>
+    </div>
+
+    <div class="video-section">
+        <h2>🎥 <span id="videoTitle">Viral Videos</span> 🎶</h2>
+        <p id="videoDescription">Watch the best PONPONPON dance videos!</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/yzC4hFK5P3g" allowfullscreen></iframe>
+            <iframe src="https://www.tiktok.com/embed/7422420984596057349" allowfullscreen></iframe>
+            <iframe src="https://v.douyin.com/iPvE5oqd/" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="upload-section">
+        <h2>💃 <span id="uploadTitle">Upload Your Dance Video</span></h2>
+        <p id="uploadDescription">Share your moves and get featured on the site!</p>
+        <div class="input-group">
+            <input type="text" id="videoLink" placeholder="Paste YouTube/TikTok/Bilibili link">
+            <button onclick="addVideo()">Submit</button>
+        </div>
+        <div id="userVideos"></div>
+    </div>
+
+    <div class="how-to-buy">
+        <h2>🚀 <span id="howToBuyTitle">How to Buy $PONPON</span></h2>
+        <p id="howToBuyStep1">Step 1: Connect your wallet (MetaMask, Trust Wallet, etc.)</p>
+        <p id="howToBuyStep2">Step 2: Buy on <a href="https://four.meme" target="_blank">Four.meme</a></p>
+        <p id="howToBuyStep3">Step 3: Trade on <a href="https://pancakeswap.finance" target="_blank">PancakeSwap</a></p>
+        <p id="howToBuyStep4">Step 4: Join the community & spread the PONPONPON energy! 🎶</p>
+    </div>
+
+    <div class="socials">
+        <h2>🔗 <span id="followUsTitle">Follow Us</span></h2>
+        <div class="social-links">
+            <a href="https://twitter.com/ponponponcoin" target="_blank">🐦 Twitter</a>
+            <a href="https://t.me/ponponponcrypto" target="_blank">📢 Telegram</a>
+            <a href="https://discord.gg/ponponpon" target="_blank">💬 Discord</a>
+        </div>
+    </div>
+
+</body>
+</html>
